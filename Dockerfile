@@ -8,7 +8,7 @@ RUN mkdir  $HOME/.vnc
 RUN echo 'luo' | vncpasswd -f > $HOME/.vnc/passwd
 # RUN echo '/bin/env  MOZ_FAKE_NO_SANDBOX=1  dbus-launch xfce4-session'  > $HOME/.vnc/xstartup
 RUN chmod 600 $HOME/.vnc/passwd
-RUN chmod 755 $HOME/.vnc/xstartup
+# RUN chmod 755 $HOME/.vnc/xstartup
 RUN echo 'whoami ' >>/luo.sh
 RUN echo 'cd ' >>/luo.sh
 RUN echo "su -l -c 'vncserver :2000 -geometry 1360x768' "  >>/luo.sh
